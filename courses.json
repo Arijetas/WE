@@ -1,0 +1,43 @@
+[
+  {
+    "kursnummer": 1,
+    "kurstitel": ".NET-Utvecklare",
+    "kursbeskrivning": "aaaaaaaaaa",
+    "kursbild": "./img/net.jpeg",
+    "kurslängd": 38,
+    "kurspris": 1195
+  },
+
+  {
+    "kursnummer": 2,
+    "kurstitel": "UX-designer",
+    "kursbeskrivning": "bbbb",
+    "kursbild": "./img/ux.jpeg",
+    "kurslängd": 38,
+    "kurspris": 1195
+  },
+  {
+    "kursnummer": 3,
+    "kurstitel": "IT-projektledare",
+    "kursbeskrivning": "dddddddd",
+    "kursbild": "./img/itproj.jpeg",
+    "kurslängd": 38,
+    "kurspris": 1195
+  },
+  {
+    "kursnummer": 4,
+    "kurstitel": "Apputvecklare",
+    "kursbeskrivning": "dddddddd",
+    "kursbild": "./img/app.jpeg",
+    "kurslängd": 38,
+    "kurspris": 1195
+  },
+  {
+    "kursnummer": 5,
+    "kurstitel": "IT-säkerhetspecialist",
+    "kursbeskrivning": "dddddddd",
+    "kursbild": "./img/kurs.jpeg",
+    "kurslängd": 38,
+    "kurspris": 1195
+  }
+]
