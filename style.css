@@ -1,3 +1,5 @@
+/*TODO kundvagn- responsiv*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -65,7 +67,8 @@ a {
   width: 94%;
   top: 5rem;
   left: 18px;
-  background-color: rgb(161, 150, 172);
+  background-color: rgba(168, 164, 164, 0.979);
+  z-index: 2;
 }
 
 .nav__link a {
@@ -86,7 +89,8 @@ a {
 .shoppingCart {
   background-color: white;
   border: white;
-  size: 3em;
+  text-align: center;
+  justify-content: center;
 }
 
 .shoppingCart:hover {
@@ -94,17 +98,20 @@ a {
 }
 
 #shopping-menu {
-  border: 7px solid black;
-  background-color: aqua;
   position: fixed;
-  right: 1%;
-  width: 20em;
-  padding-left: 2%;
-  top: 10%;
+  display: none;
+  z-index: 1;
 }
 
-.shoppinglist {
+#shoppinglist {
   list-style: none;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  width: 40%;
+  top: 5rem;
+  right: 18px;
+  background-color: rgb(161, 150, 172);
 }
 /*main styling*/
 .main {
@@ -155,6 +162,10 @@ h3 {
   font-size: 2em;
 }
 
+img2 {
+  height: auto;
+  width: 100%;
+}
 .slideshow-container {
   max-width: 45%;
   position: relative;

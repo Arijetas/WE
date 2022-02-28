@@ -7,8 +7,6 @@ hamburger.addEventListener("click", () => {
 
 /////////////////////////////////////////
 
-/////////////////////////////////////////
-
 const courses = [];
 const cart = [];
 
@@ -64,7 +62,7 @@ function showCourses() {
     const btn = document.createElement("a");
     btn.classList.add("add-btn");
     btn.onclick = function () {
-      addCourseToCart(`${course.kursnummer}`);
+      addCourseToCart(course.kursnummer);
     };
     //Den här raden gör samma sak som 66-67
     // btn.setAttribute("onclick", `addCourseToCart(${course.kursnummer})`);
@@ -77,6 +75,15 @@ function showCourses() {
     div2.appendChild(price);
     div2.appendChild(btn);
     courseContainer.appendChild(div1);
+  }
+}
+
+function showCart() {
+  const cart = document.getElementById("shopping-menu");
+  if (cart.style.display == "block") {
+    cart.style.display = "none";
+  } else {
+    cart.style.display = "block";
   }
 }
 
@@ -115,6 +122,11 @@ function removeCourse(nr) {
   const cartList = document.getElementById("shoppinglist");
   let li = document.getElementById(`${nr}`);
   cartList.removeChild(li);
+  //find- hittar element som uppnår ett villkor.
+  const elementRemove = cart.find((element) => element.kursnummer === nr);
+  //splice raderar från ett index man anger och antal som man vill ta bort. Om man vill ta bort en specifik index
+  //så hittar man en indexet på det man vill ta bort sen skriver 1.
+  cart.splice(cart.indexOf(elementRemove), 1);
 }
 
 //Slides
