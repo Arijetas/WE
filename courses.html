@@ -9,7 +9,6 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -26,53 +25,35 @@
             <div class="nav__link hide">
                 <a href="index.html#main">STARTSIDA</a>
                 <a href="courses.html">KURSER</a>
-                <a href="index.html#about">OM OSS</a>
+                <a href="#">LOGGA IN</a>
                 <a href="#"> KONTAKT</a>
-                <button class="shoppingCart" onclick="showCart()"><i class="fa fa-shopping-cart"></i></button>
-
+                <a href="#" onclick="showCart()"> <i class="fa fa-shopping-cart"></i></a>
             </div>
         </nav>
     </header>
 
-    <div id="shopping-menu">
+    <!--Kundvagnen-->
+    <div id="shopping-cart">
         <ul id="shoppinglist">
+        </ul>
     </div>
-    <!----------------------------Kurser----------------------------->
 
+    <!--Kurser-->
     <h1 class="ak"> Aktuella kurser</h1>
     <div class="courses" id="course-container">
-
-        <!-- <div class="course"><img src="./img/kurs.jpeg">
-            <div class="title">.NET-Utvecklare</div>
-            <p class="details">aaaaaaaa</p>
-            <p class="length">38</p>
-            <button class="add-btn">Lägg till</button>
-        </div>
-        <div class="course"><img src="./img/kurs.jpeg">
-            <div class="title">UX-designer</div>
-            <p class="details">bbbb</p>
-            <p class="length">38</p>
-            <button class="add-btn">Lägg till</button>
-        </div>
-        <div class="course"><img src="./img/kurs.jpeg">
-            <div class="title">Javautvecklare</div>
-            <p class="details">ccccc</p>
-            <p class="length">38</p>
-            <button class="add-btn">Lägg till</button>
-        </div>
-        <div class="course"><img src="./img/kurs.jpeg">
-            <div class="title">IT-projektledare</div>
-            <p class="details">dddddddd</p>
-            <p class="length">38</p>
-            <button class="add-btn">Lägg till</button>
-        </div> -->
     </div>
 
+    <!--Modal-->
+    <!--Ska täcka hela skärmen.-->
+    <div class="modal-form-container">
+        <!--Sjävla modalen!-->
+        <div class="modal-form">
+            <form>
 
-
-
-
-
+            </form>
+        </div>
+    </div>
+    <footer> Westcoast Education AB © 2022 All rights reserved</footer>
 </body>
 <script src="script.js"></script>
 <script src="courses.json"></script>
