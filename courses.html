@@ -26,7 +26,6 @@
                 <a href="index.html#main">STARTSIDA</a>
                 <a href="courses.html">KURSER</a>
                 <a href="#" onclick="openModal()"> LOGGA IN</a>
-                <a href="#"> KONTAKT</a>
                 <a href="#" onclick="showCart()"> <i class="fa fa-shopping-cart"></i></a>
             </div>
         </nav>
@@ -51,23 +50,24 @@
             <h2>Lägg till kurs</h2>
             <form>
                 <label for="kursnummer">Kursnummer: </label>
-                <input type="nr" name="kursnummer" id="courseId">
+                <input type="nr" name="kursnummer" id="courseId" required>
 
                 <label for="kurstitel">Titel: </label>
-                <input type="text" name="kurstitel" id="courseTitle">
+                <input type="text" name="kurstitel" id="courseTitle" required>
 
                 <label for="kursbeskrivning">Beskrivning: </label>
-                <input type="desc" name="kursbeskrivning" id="courseDesc">
+                <textarea name="kursbeskrivning" id="courseDesc" cols="30" rows="10"></textarea>
 
-                <label for="kursbild">Bild: </label>
-                <input type="pic" name="kursbild" id="coursePic">
+                <label for="kursbild">Bild (URL): </label>
+                <input type="pic" name="kursbild" id="coursePic" required>
 
                 <label for="kurslängd">Kurslängd: </label>
-                <input type="length" name="kurslängd" id="courseLength">
+                <input type="length" name="kurslängd" id="courseLength" required>
 
                 <label for="kurspris">Pris: </label>
-                <input type="price" name="kurspris" id="coursePrice">
+                <input type="price" name="kurspris" id="coursePrice" required>
             </form>
+            <button class="addNewCourseBtn" onclick="addNewCourse()">Lägg till</button>
         </div>
     </div>
     <footer> Westcoast Education AB © 2022 All rights reserved</footer>

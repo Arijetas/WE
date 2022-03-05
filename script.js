@@ -64,7 +64,7 @@ function showCourses() {
     btn.onclick = function () {
       addCourseToCart(course.kursnummer);
     };
-    //Den här raden gör samma sak som 66-67
+    //Den här raden gör samma sak som 64-65
     // btn.setAttribute("onclick", `addCourseToCart(${course.kursnummer})`);
     btn.innerText = "Lägg till";
 
@@ -164,6 +164,30 @@ function clearCart() {
   alert("Tack för köpet!");
 }
 
+function openModal() {
+  const modal = document.getElementById("modal-form-container");
+  if (modal.style.display == "block") {
+    modal.style.display = "none";
+  } else {
+    modal.style.display = "block";
+  }
+}
+
+// function addNewCourse() {
+//   const newCourse = {
+//     kursnummer: document.getElementById("courseId").value,
+//     kurstitel: document.getElementById("courseTitle").value,
+//     kursbeskrivning: document.getElementById("courseDesc").value,
+//     kurslängd: document.getElementById("courseLength").value,
+//     kurspris: document.getElementById("coursePrice").value,
+//     kursbild: document.getElementById("coursePic").value,
+//   };
+
+//   courses.push(newCourse);
+//   console.log(courses);
+//   alert("Kursen skapades!");
+// }
+
 //Slides
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -177,41 +201,41 @@ function currentSlide(n) {
 }
 
 //kod för slides +
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-//kod för autoslide
-
-// var slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
+// function showSlides(n) {
 //   var i;
 //   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
 //   for (i = 0; i < slides.length; i++) {
 //     slides[i].style.display = "none";
 //   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {
-//     slideIndex = 1;
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
 //   }
 //   slides[slideIndex - 1].style.display = "block";
-//   setTimeout(showSlides, 2000); // byta bild  efter 2 sekunder
+//   dots[slideIndex - 1].className += " active";
 // }
+
+//kod för autoslide
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // byta bild  efter 2 sekunder
+}
