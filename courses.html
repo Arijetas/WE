@@ -25,7 +25,7 @@
             <div class="nav__link hide">
                 <a href="index.html#main">STARTSIDA</a>
                 <a href="courses.html">KURSER</a>
-                <a href="#" onclick="openModal()"> LOGGA IN</a>
+                <a href="#" onclick="openModal()"> NY KURS</a>
                 <a href="#" onclick="showCart()"> <i class="fa fa-shopping-cart"></i></a>
             </div>
         </nav>
@@ -50,22 +50,22 @@
             <h2>Lägg till kurs</h2>
             <form>
                 <label for="kursnummer">Kursnummer: </label>
-                <input type="nr" name="kursnummer" id="courseId" required>
+                <input type="nr" name="kursnummer" id="courseId">
 
                 <label for="kurstitel">Titel: </label>
-                <input type="text" name="kurstitel" id="courseTitle" required>
+                <input type="text" name="kurstitel" id="courseTitle">
 
                 <label for="kursbeskrivning">Beskrivning: </label>
                 <textarea name="kursbeskrivning" id="courseDesc" cols="30" rows="10"></textarea>
 
                 <label for="kursbild">Bild (URL): </label>
-                <input type="pic" name="kursbild" id="coursePic" required>
+                <input type="pic" name="kursbild" id="coursePic" placeholder="Ex.default.png" required>
 
                 <label for="kurslängd">Kurslängd: </label>
-                <input type="length" name="kurslängd" id="courseLength" required>
+                <input type="length" name="kurslängd" id="courseLength">
 
                 <label for="kurspris">Pris: </label>
-                <input type="price" name="kurspris" id="coursePrice" required>
+                <input type="price" name="kurspris" id="coursePrice">
             </form>
             <button class="addNewCourseBtn" onclick="addNewCourse()">Lägg till</button>
         </div>

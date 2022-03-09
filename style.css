@@ -92,7 +92,7 @@ a {
 }
 
 .start {
-  font-size: 1.5rem;
+  font-size: 1.3em;
   text-align: center;
   width: 100%;
   padding-top: 10%;
@@ -316,20 +316,29 @@ h3 {
   background-color: white;
 }
 
-.modal-form {
+/* .modal-form {
   position: relative;
   justify-content: center;
   width: 50%;
   height: auto;
-  padding-top: 20%;
   z-index: 2;
-  padding: 10%;
+  padding: 5%;
   left: 25%;
   background-color: whitesmoke;
   box-shadow: 2px 3px 7px 1px black;
   transition: transform 0.2s ease-out;
-}
+  font-size: 11px;
+} */
 
+.modal-form {
+  border-radius: 8px;
+  z-index: 2;
+  background-color: #ffffff;
+  width: 25em;
+  margin: auto;
+  padding: 20px;
+  font-size: 12px;
+}
 form {
   display: flex;
   flex-direction: column;

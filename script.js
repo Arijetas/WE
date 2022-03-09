@@ -68,6 +68,12 @@ function showCourses() {
     // btn.setAttribute("onclick", `addCourseToCart(${course.kursnummer})`);
     btn.innerText = "Lägg till";
 
+    if (course.kursbild == "") {
+      img.src = "./img/default.jpeg";
+    } else {
+      img.src = course.kursbild;
+    }
+
     div1.appendChild(img);
     div1.appendChild(div2);
     div2.appendChild(pDetails);
@@ -103,6 +109,12 @@ function updateCart() {
 
   shoppingList.innerHTML = "";
 
+  if (cart.length <= 0) {
+    const emptyCart = document.createElement("div");
+    emptyCart.innerText = "Kundvagnen är tom";
+    shoppingList.appendChild(emptyCart);
+    return;
+  }
   //Uppdaterar cart-listan, typ.
   cart.forEach((cartItemId) => {
     let currentCourse = courses.find(
@@ -173,20 +185,77 @@ function openModal() {
   }
 }
 
-// function addNewCourse() {
-//   const newCourse = {
-//     kursnummer: document.getElementById("courseId").value,
-//     kurstitel: document.getElementById("courseTitle").value,
-//     kursbeskrivning: document.getElementById("courseDesc").value,
-//     kurslängd: document.getElementById("courseLength").value,
-//     kurspris: document.getElementById("coursePrice").value,
-//     kursbild: document.getElementById("coursePic").value,
-//   };
+function addNewCourse() {
+  const kursnummer = document.getElementById("courseId").value;
+  const kurstitel = document.getElementById("courseTitle").value;
+  const kursbeskrivning = document.getElementById("courseDesc").value;
+  const kurslängd = document.getElementById("courseLength").value;
+  const kurspris = parseInt(document.getElementById("coursePrice").value);
+  const kursbild = document.getElementById("coursePic").value;
 
-//   courses.push(newCourse);
-//   console.log(courses);
-//   alert("Kursen skapades!");
-// }
+  if (kursnummer == "") {
+    console.log("Kursnummer är fel");
+    alert("fyll i kursnummer");
+    return;
+  }
+
+  if (kurstitel == "") {
+    console.log("Kurstitel är fel");
+    alert("fyll i kurstitel");
+    return;
+  }
+
+  if (kursbeskrivning == "") {
+    console.log("Kursbesk är fel");
+    alert("fyll i kursbeskrivning");
+    return;
+  }
+
+  if (kurslängd == "") {
+    console.log("Kurslängd är fel");
+    alert("fyll i kurslängd");
+    return;
+  }
+  //hörs jag?
+  if (Number.isNaN(kurspris) || kurspris == "") {
+    console.log("Kurspris är fel");
+    alert("Ange en siffra");
+    return;
+  }
+
+  const newCourse = {
+    kursnummer,
+    kurstitel,
+    kursbeskrivning,
+    kurslängd,
+    kurspris,
+    kursbild,
+  };
+
+  let input = new Course(newCourse);
+  courses.push(input);
+  console.log(courses);
+  alert("Kursen skapades!");
+  showCourses();
+}
+// Testade lite grejer
+// const kursnummer = document.getElementById("courseId").value;
+//   const kurstitel = document.getElementById("courseTitle").value;
+//   const kursbeskrivning = document.getElementById("courseDesc").value;
+//   const kurslängd = document.getElementById("courseLength").value;
+//   const kurspris = document.getElementById("coursePrice").value;
+//   const kursbild = document.getElementById("coursePic").value;
+
+//   const newCourseObject = new Object(
+//     kursnummer,
+//     kurstitel,
+//     kursbeskrivning,
+//     kurslängd,
+//     kurspris,
+//     kursbild
+//   );
+
+//   const newCourse = new Course(newCourseObject);
 
 //Slides
 var slideIndex = 1;
