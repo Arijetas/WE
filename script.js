@@ -238,24 +238,6 @@ function addNewCourse() {
   alert("Kursen skapades!");
   showCourses();
 }
-// Testade lite grejer
-// const kursnummer = document.getElementById("courseId").value;
-//   const kurstitel = document.getElementById("courseTitle").value;
-//   const kursbeskrivning = document.getElementById("courseDesc").value;
-//   const kurslängd = document.getElementById("courseLength").value;
-//   const kurspris = document.getElementById("coursePrice").value;
-//   const kursbild = document.getElementById("coursePic").value;
-
-//   const newCourseObject = new Object(
-//     kursnummer,
-//     kurstitel,
-//     kursbeskrivning,
-//     kurslängd,
-//     kurspris,
-//     kursbild
-//   );
-
-//   const newCourse = new Course(newCourseObject);
 
 //Slides
 var slideIndex = 1;
